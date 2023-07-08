@@ -1,0 +1,11 @@
+.Footer {
+
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.Footer h4{
+    font-size: 18px;
+}

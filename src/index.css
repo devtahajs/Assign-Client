@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@100;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/* step 2 #F2EAD3
+step 3 #DFD7BF
+button 1 #3F2305 Cholate
+button 2 #FF8551  orange
+*/
+
+body {
+  background-color: #f5f5f5;
+  font-family: "Ysabeau Office", sans-serif;
+}
+.App {
+  border: 1px solid black;
+  overflow: hidden;
+  padding: 1rem;
+  height: 95vh;
+}
+
+.SignIn {
+  padding: 13px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #3f2305;
+  color: white;
+  box-shadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+.SignUp {
+  padding: 13px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #ff8551;
+  color: white;
+  box-shadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+.SignIn:hover {
+  cursor: pointer;
+  color: var(--orange);
+  background: transparent;
+  border: 2px solid var(--orange);
+  transition: 0.3s ease-in-out;
+}
+.SignUp:hover {
+  cursor: pointer;
+  color: var(--orange);
+  background: transparent;
+  border: 1px solid var(--orange);
+  transition: 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
