@@ -1,0 +1,40 @@
+.bottomcont {
+  width: 90vw;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+}
+.leftbot {
+  width: 50%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 113, 0.548);
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+.leftbot:hover{
+    background-color: transparent;
+}
+
+.rightbot {
+  width: 50%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(133, 255, 133);
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+.rightbot:hover{
+    background-color: transparent;
+}

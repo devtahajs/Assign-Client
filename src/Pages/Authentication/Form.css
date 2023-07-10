@@ -1,8 +1,9 @@
 .FormContainer {
   width: 70%;
   padding: 5px;
-  background-color: #f2ead3;
-  border-radius: 5px;
+  /* background-color: #b4ddff36; */
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
   box-shadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
 }
 h2 {

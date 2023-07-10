@@ -1,8 +1,8 @@
 .privatecontainer {
-  height: 74vh;
-  padding: 10px;
+  height: 73vh;
+  width: 95vw;
+  padding: 5px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  border: 1px solid black;
+ 
 }
