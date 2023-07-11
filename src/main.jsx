@@ -13,6 +13,7 @@ import Register from "./Pages/Authentication/Register.jsx";
 import Login from "./Pages/Authentication/Login.jsx";
 import PrivateRoute from "./Components/PrivateComponents/PrivateComponent.jsx";
 import Home from "./Pages/HomePage/home.jsx";
+import Singleassignment from "./Components/Single Assignment/singleassignment.jsx";
 
 //------------***---------------***----------
 //Route SetUp
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       {/* Private Routes */}
       <Route path="" element={<PrivateRoute />}>
         <Route path="/home" element={<Home />} />
+        <Route path="/single" element={<Singleassignment />} />
       </Route>
     </Route>
   )
