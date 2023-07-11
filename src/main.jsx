@@ -14,7 +14,8 @@ import Login from "./Pages/Authentication/Login.jsx";
 import PrivateRoute from "./Components/PrivateComponents/PrivateComponent.jsx";
 import Home from "./Pages/HomePage/home.jsx";
 import Singleassignment from "./Components/Single Assignment/singleassignment.jsx";
-
+import { Provider } from "react-redux";
+import store from "./Store/Store.js";
 //------------***---------------***----------
 //Route SetUp
 const router = createBrowserRouter(
@@ -33,6 +34,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );

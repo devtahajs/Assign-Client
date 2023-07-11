@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./middlesection.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -19,6 +19,7 @@ const MiddleSection = () => {
 
   const handleClick = (data) => {
     dispatch(addsingle(data));
+    localStorage.setItem("single", JSON.stringify(data));
     navigate("/single");
   };
 
@@ -32,7 +33,7 @@ const MiddleSection = () => {
             data.map((data) => (
               <div
                 className="Card"
-                key={data.id}
+                key={data._id}
                 onClick={() => handleClick(data)}
               >
                 <div className="up">

@@ -47,7 +47,11 @@ const initialState = {
 export const AssignmentSlice = createSlice({
   name: "AssignmentSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    addfilterdata: (state, action) => {
+      state.data = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getAssign.pending, (state, action) => {
@@ -67,5 +71,5 @@ export const AssignmentSlice = createSlice({
   },
 });
 
-export const {} = AssignmentSlice.actions;
+export const { addfilterdata } = AssignmentSlice.actions;
 export default AssignmentSlice.reducer;

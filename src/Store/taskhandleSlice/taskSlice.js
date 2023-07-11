@@ -15,8 +15,11 @@ export const taskSlice = createSlice({
     addsingle: (state, action) => {
       state.single = action.payload;
     },
+    pendingtask: (state, action) => {
+      state.isPending.push(action.payload);
+    },
   },
 });
 
-export const { addsingle } = taskSlice.actions;
+export const { addsingle, pendingtask } = taskSlice.actions;
 export default taskSlice.reducer;
