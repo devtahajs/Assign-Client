@@ -60,8 +60,11 @@ const Pending = () => {
                     <h4>{data.data.category}</h4>
                   </div>
                 </div>
-                <div className="rightdivs">
-                  <h4 className="trash" onClick={() => handleDelete(data._id)}>
+                <div
+                  className="rightdivs"
+                  onClick={() => handleDelete(data._id)}
+                >
+                  <h4 className="trash">
                     <CiTrash />
                   </h4>
                 </div>

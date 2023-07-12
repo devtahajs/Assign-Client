@@ -37,6 +37,12 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(252, 93, 93, 0.486);
+  font-size: 33px; 
+  transition: 0.2s ease-in-out;
+}
+.rightdivs:hover{
+  background-color: red;
+  color: white;
 }
 .downp {
   min-height: 4.5vh;
@@ -52,10 +58,4 @@
   align-items: center;
   /* border: 1px solid black; */
 }
-.trash {
-  color: black;
-  font-size: 33px; 
-}
-.trash:hover{
-    color: rgb(255, 255, 255);
-}
+
