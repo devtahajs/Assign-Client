@@ -11,7 +11,10 @@ const Pending = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { data, isLoading } = useSelector((state) => state.assign);
+  const { isLoading } = useSelector((state) => state.assign);
+  const { isPending } = useSelector((state) => state.task);
+
+  console.log(isPending);
 
   const handleClick = (data) => {
     dispatch(addsingle(data));
@@ -25,8 +28,8 @@ const Pending = () => {
         <LoadingSpinner />
       ) : (
         <div className="middlecont">
-          {data &&
-            data.map((data) => (
+          {isPending &&
+            isPending.map((data) => (
               <div
                 className="Card"
                 key={data._id}

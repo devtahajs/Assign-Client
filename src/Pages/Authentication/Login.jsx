@@ -27,7 +27,7 @@ const Login = () => {
     }
 
     if (isSuccess) {
-      toast.success("Welcome Back");
+      toast.success(`Welcome Back  😃 ${user.name}`);
       navigate("/home");
     }
 

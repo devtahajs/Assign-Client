@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../../Store/Slices/AuthSlice.js";
+import { toast } from "react-toastify";
 
 // --------------***----------------------
 
@@ -18,6 +19,7 @@ const Navbar = () => {
     dispatch(logout());
     dispatch(reset());
     navigate("/login");
+    toast.success("See,You Again🙃")
   };
 
   return (

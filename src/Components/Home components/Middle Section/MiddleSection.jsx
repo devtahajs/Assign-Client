@@ -11,15 +11,15 @@ const MiddleSection = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
- 
   const { data, isLoading } = useSelector((state) => state.assign);
   const { category } = useSelector((state) => state.task);
-  
+
   useEffect(() => {
     dispatch(getAssign());
-  }, [dispatch,category]);
+  }, [dispatch, category]);
 
-  
+ 
+
   const handleClick = (data) => {
     dispatch(addsingle(data));
     localStorage.setItem("single", JSON.stringify(data));
@@ -42,6 +42,8 @@ const MiddleSection = () => {
                 } else if (category === "js") {
                   return ele.category === category;
                 } else if (category === "all") {
+                  return ele;
+                } else {
                   return ele;
                 }
               })
