@@ -3,14 +3,24 @@ import "./singleassignment.css";
 import { GoGoal } from "react-icons/go";
 import { MdDateRange, MdCategory } from "react-icons/md";
 import { pendingtask } from "../../Store/taskhandleSlice/taskSlice";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import {
+  sendPending,
+  resetpending,
+} from "../../Store/PendingSlice/PendingSlice";
+import { toast } from "react-toastify";
+// ----------------------***-----------------------------------------
 
 const Singleassignment = () => {
-  const [singledata, setSingledata] = useState();
+  const navigate = useNavigate();
+  const [data, setSingledata] = useState();
 
   const dispatch = useDispatch();
   const { single } = useSelector((state) => state.task);
+  const { isError, isSuccess, message, pendingData } = useSelector(
+    (state) => state.pending
+  );
 
   useEffect(() => {
     const data = window.localStorage.getItem("single");
@@ -18,11 +28,22 @@ const Singleassignment = () => {
     setSingledata(finaldata);
   }, []);
 
-  
+  //useEffect
+  useEffect(() => {
+    dispatch(resetpending());
+    if (isError) {
+      toast.error(message);
+    }
+    if (isSuccess) {
+      toast.success("Added To Pending");
+    }
+    dispatch(resetpending());
+  }, [isError, isSuccess, message, navigate, dispatch]);
 
   //Handling Pending
   const Pendinghandle = () => {
-    dispatch(pendingtask(single));
+    const datasend = { data };
+    dispatch(sendPending(datasend));
   };
 
   return (
@@ -31,21 +52,24 @@ const Singleassignment = () => {
         <div>
           <div className="titl">
             <GoGoal />
-            {singledata ? singledata.title : null}
+            {data ? data.title : null}
           </div>
         </div>
         <div className="dateholder">
           <p>
             <MdDateRange />
-            {singledata ? singledata.date : null}
+            {data ? data.date : null}
           </p>
           <p>
             <MdCategory />
-            {singledata ? singledata.category : null}
+            {data ? data.category : null}
           </p>
         </div>
       </div>
-      <div className="desccont"> <p> {singledata ? singledata.desc : null}</p> </div>
+      <div className="desccont">
+        {" "}
+        <p> {data ? data.desc : null}</p>{" "}
+      </div>
       <div className="downx">
         <button className="btn1" onClick={Pendinghandle}>
           Pending

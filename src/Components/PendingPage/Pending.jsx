@@ -5,16 +5,16 @@ import { useNavigate } from "react-router-dom";
 
 import LoadingSpinner from "../Spinner/Spinner";
 import { addsingle } from "../../Store/taskhandleSlice/taskSlice";
+import { getPendingData, resetpending } from "../../Store/PendingSlice/PendingSlice";
+
 // ------------------***--------------------------
 
 const Pending = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { isLoading } = useSelector((state) => state.assign);
-  const { isPending } = useSelector((state) => state.task);
+  const { pendingData, isLoading } = useSelector((state) => state.pending);
 
-  console.log(isPending);
 
   const handleClick = (data) => {
     dispatch(addsingle(data));
@@ -28,19 +28,19 @@ const Pending = () => {
         <LoadingSpinner />
       ) : (
         <div className="middlecont">
-          {isPending &&
-            isPending.map((data) => (
+          {pendingData &&
+            pendingData.map((data) => (
               <div
                 className="Card"
-                key={data._id}
-                onClick={() => handleClick(data)}
+                key={data.data._id}
+                onClick={() => handleClick(data.data)}
               >
                 <div className="up">
-                  <h3>{data.title}</h3>
+                  <h3>{data.data.title}</h3>
                 </div>
                 <div className="down">
-                  <h4>{data.date}</h4>
-                  <h4>{data.category}</h4>
+                  <h4>{data.data.date}</h4>
+                  <h4>{data.data.category}</h4>
                 </div>
               </div>
             ))}

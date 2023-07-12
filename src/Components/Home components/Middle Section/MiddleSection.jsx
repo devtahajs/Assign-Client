@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { getAssign } from "../../../Store/Slices/Assignmentslice";
 import LoadingSpinner from "../../Spinner/Spinner";
 import { addsingle } from "../../../Store/taskhandleSlice/taskSlice";
+import { resetpending } from "../../../Store/PendingSlice/PendingSlice";
 // ------------------***--------------------------
 
 const MiddleSection = () => {
@@ -14,16 +15,13 @@ const MiddleSection = () => {
   const { data, isLoading } = useSelector((state) => state.assign);
   const { category } = useSelector((state) => state.task);
 
-  useEffect(() => {
-    dispatch(getAssign());
-  }, [dispatch, category]);
-
- 
+  
 
   const handleClick = (data) => {
     dispatch(addsingle(data));
     localStorage.setItem("single", JSON.stringify(data));
     navigate("/single");
+    dispatch(resetpending());
   };
 
   return (
