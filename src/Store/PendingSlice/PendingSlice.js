@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { sendpend, getPending } from "./PendingService";
+import { sendpend, getPending, deletePending } from "./PendingService";
 // ------------------------***----------------------
 
 //?initial State
@@ -39,6 +39,24 @@ export const getPendingData = createAsyncThunk(
     try {
       const token = thunkAPI.getState().auth.user.token;
       return await getPending(token);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+//?Deleting Pending
+export const DeletePendingData = createAsyncThunk(
+  "pendingdatadelete/delete",
+  async (id, thunkAPI) => {
+    try {
+      return await deletePending(id);
     } catch (error) {
       const message =
         (error.response &&
@@ -96,6 +114,9 @@ export const PendingSlice = createSlice({
         state.isSuccess = false;
         state.message = action.payload;
         state.pendingData = null;
+      })
+      .addCase(DeletePendingData.fulfilled, (state, action) => {
+        state.data = action.payload;
       });
   },
 });

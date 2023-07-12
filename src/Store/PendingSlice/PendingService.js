@@ -1,6 +1,6 @@
 import axios from "axios";
 
-//?Axios Service Get Assignments
+//?Axios Service Send Pending Data
 export const sendpend = async (data, token) => {
   const config = {
     headers: {
@@ -15,7 +15,7 @@ export const sendpend = async (data, token) => {
   return response.data;
 };
 
-//?Axios Service Get Assignments
+//?Axios Service Get Pending Data
 export const getPending = async (token) => {
   const config = {
     headers: {
@@ -28,3 +28,12 @@ export const getPending = async (token) => {
   );
   return response.data;
 };
+
+//?Axios Service Delete Pending Data
+export const deletePending = async (id) => {
+  const response = await axios.delete(
+    `https://assign-server.onrender.com/assign/deletepend/${id}`
+  );
+  return response.data;
+};
+

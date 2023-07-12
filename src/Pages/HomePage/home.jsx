@@ -5,7 +5,7 @@ import BottomSection from "../../Components/Home components/Bottom Section/Botto
 import { getAssign } from "../../Store/Slices/Assignmentslice";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { getPendingData } from "../../Store/PendingSlice/PendingSlice";
+import { getPendingData, resetpending } from "../../Store/PendingSlice/PendingSlice";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -13,6 +13,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(getAssign());
     dispatch(getPendingData());
+    dispatch(resetpending())
   }, []);
 
   return (
