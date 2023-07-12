@@ -5,6 +5,7 @@ const initialState = {
   single: [],
   isPending: [],
   completed: [],
+  category: [],
 };
 
 //creating Slice
@@ -18,8 +19,11 @@ export const taskSlice = createSlice({
     pendingtask: (state, action) => {
       state.isPending.push(action.payload);
     },
+    category: (state, action) => {
+      state.category = action.payload;
+    },
   },
 });
 
-export const { addsingle, pendingtask } = taskSlice.actions;
+export const { addsingle, pendingtask, category } = taskSlice.actions;
 export default taskSlice.reducer;

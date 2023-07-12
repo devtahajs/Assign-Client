@@ -11,12 +11,15 @@ const MiddleSection = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+ 
+  const { data, isLoading } = useSelector((state) => state.assign);
+  const { category } = useSelector((state) => state.task);
+  
   useEffect(() => {
     dispatch(getAssign());
-  }, [dispatch]);
+  }, [dispatch,category]);
 
-  const { data, isLoading } = useSelector((state) => state.assign);
-
+  
   const handleClick = (data) => {
     dispatch(addsingle(data));
     localStorage.setItem("single", JSON.stringify(data));
@@ -30,21 +33,33 @@ const MiddleSection = () => {
       ) : (
         <div className="middlecont">
           {data &&
-            data.map((data) => (
-              <div
-                className="Card"
-                key={data._id}
-                onClick={() => handleClick(data)}
-              >
-                <div className="up">
-                  <h3>{data.title}</h3>
+            data
+              .filter((ele) => {
+                if (category === "html") {
+                  return ele.category === category;
+                } else if (category === "css") {
+                  return ele.category === category;
+                } else if (category === "js") {
+                  return ele.category === category;
+                } else if (category === "all") {
+                  return ele;
+                }
+              })
+              .map((data) => (
+                <div
+                  className="Card"
+                  key={data._id}
+                  onClick={() => handleClick(data)}
+                >
+                  <div className="up">
+                    <h3>{data.title}</h3>
+                  </div>
+                  <div className="down">
+                    <h4>{data.date}</h4>
+                    <h4>{data.category}</h4>
+                  </div>
                 </div>
-                <div className="down">
-                  <h4>{data.date}</h4>
-                  <h4>{data.category}</h4>
-                </div>
-              </div>
-            ))}
+              ))}
         </div>
       )}
     </>

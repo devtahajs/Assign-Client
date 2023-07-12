@@ -1,27 +1,30 @@
 import { useSelector } from "react-redux";
 import "./topsection.css";
-import { useEffect } from "react";
-import {
-  addfilterdata,
-  getAssign,
-} from "../../../Store/Slices/Assignmentslice";
+import { useEffect, useState } from "react";
+import { category } from "../../../Store/taskhandleSlice/taskSlice";
 import { useDispatch } from "react-redux";
 
 const Topsection = () => {
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.assign);
 
+  const handleOnclick = (value) => {
+    dispatch(category(value));
+  };
 
   return (
     <div className="topcont">
-      <button className="pribtn" >
+      <button className="pribtn" onClick={() => handleOnclick("html")}>
         Html
       </button>
-      <button className="pribtn" >
+      <button className="pribtn" onClick={() => handleOnclick("css")}>
         Css
       </button>
-      <button className="pribtn">Js</button>
-      <button className="lastbtn">React</button>
+      <button className="pribtn" onClick={() => handleOnclick("js")}>
+        Js
+      </button>
+      <button className="lastbtn" onClick={() => handleOnclick("all")}>
+        All
+      </button>
     </div>
   );
 };

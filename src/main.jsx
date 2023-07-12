@@ -16,6 +16,7 @@ import Home from "./Pages/HomePage/home.jsx";
 import Singleassignment from "./Components/Single Assignment/singleassignment.jsx";
 import { Provider } from "react-redux";
 import store from "./Store/Store.js";
+import Pending from "./Components/PendingPage/Pending.jsx";
 //------------***---------------***----------
 //Route SetUp
 const router = createBrowserRouter(
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
       <Route path="" element={<PrivateRoute />}>
         <Route path="/home" element={<Home />} />
         <Route path="/single" element={<Singleassignment />} />
+        <Route path="/pendings" element={<Pending />} />
       </Route>
     </Route>
   )

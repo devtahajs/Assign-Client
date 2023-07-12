@@ -1,10 +1,11 @@
 .topcont {
   /* border: 1px solid black; */
   width: 90vw;
-  height: 8vh;
+  min-height: 8vh;
   border-radius: 15px;
   overflow: hidden;
   border: 0.5px rgba(0, 0, 0, 0.233) solid;
+
 }
 .pribtn {
   height: 8vh;
