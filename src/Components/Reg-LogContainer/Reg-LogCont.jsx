@@ -1,13 +1,7 @@
-
 import "./RegLogCont.css";
-import { Navigate, Outlet } from "react-router-dom";
 
-const RegLogCont = () => {
-  return (
-    <div className="container">
-      <Outlet/>
-    </div>
-  );
+const RegLogCont = ({ children }) => {
+  return <div className="container">{children}</div>;
 };
 
 export default RegLogCont;

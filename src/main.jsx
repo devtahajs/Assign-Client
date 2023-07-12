@@ -25,7 +25,7 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<Register />} />
       <Route path="/login" element={<Login />} />
       {/* Private Routes */}
-      <Route path="" element={<PrivateRoute />}>
+      <Route  element={<PrivateRoute />}>
         <Route path="/home" element={<Home />} />
         <Route path="/single" element={<Singleassignment />} />
         <Route path="/pendings" element={<Pending />} />
