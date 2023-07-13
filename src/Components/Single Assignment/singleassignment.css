@@ -1,6 +1,6 @@
 .singleCont {
  height: 78vh;
-  width: 100%;
+  min-width: 95vw;
   display: flex;
   flex-direction: column;
   gap: 7px;
