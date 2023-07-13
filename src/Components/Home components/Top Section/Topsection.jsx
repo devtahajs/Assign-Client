@@ -1,8 +1,9 @@
-import { useSelector } from "react-redux";
 import "./topsection.css";
-import { useEffect, useState } from "react";
 import { category } from "../../../Store/taskhandleSlice/taskSlice";
 import { useDispatch } from "react-redux";
+import { BsFiletypeHtml, BsFiletypeCss, BsReplyAll } from "react-icons/bs";
+import { BiLogoJavascript } from "react-icons/bi";
+// --------------------***------------
 
 const Topsection = () => {
   const dispatch = useDispatch();
@@ -13,17 +14,17 @@ const Topsection = () => {
 
   return (
     <div className="topcont">
-      <button className="pribtn" onClick={() => handleOnclick("html")}>
-        Html
+      <button className="pribtn1" onClick={() => handleOnclick("html")}>
+        <BsFiletypeHtml />
       </button>
-      <button className="pribtn" onClick={() => handleOnclick("css")}>
-        Css
+      <button className="pribtn2" onClick={() => handleOnclick("css")}>
+        <BsFiletypeCss />
       </button>
-      <button className="pribtn" onClick={() => handleOnclick("js")}>
-        Js
+      <button className="pribtn3" onClick={() => handleOnclick("js")}>
+        <BiLogoJavascript />
       </button>
-      <button className="lastbtn" onClick={() => handleOnclick("all")}>
-        All
+      <button className="pribtn4" onClick={() => handleOnclick("all")}>
+        <BsReplyAll />
       </button>
     </div>
   );

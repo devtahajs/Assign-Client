@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./singleassignment.css";
 import { GoGoal } from "react-icons/go";
-import { MdDateRange, MdCategory } from "react-icons/md";
+
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {

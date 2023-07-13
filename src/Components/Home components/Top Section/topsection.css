@@ -4,41 +4,68 @@
   min-height: 8vh;
   border-radius: 5px;
   overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pribtn1{
+  min-width:20%;
+  min-height: 8vh;
+  font-size: 30px;
+  background-color: transparent;
   border: 0.5px rgba(0, 0, 0, 0.233) solid;
+  border-radius: 20px;
+  background-color: #afd3e296;
+  transition: 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+.pribtn2{
+  min-width:20%;
+  min-height: 8vh;
+  font-size: 30px;
+  background-color: transparent;
+  border: 0.5px rgba(0, 0, 0, 0.233) solid;
+  border-radius: 20px;
+  background-color: #ffaac996;
+  transition: 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+.pribtn3{
+  min-width:20%;
+  min-height: 8vh;
+  font-size: 30px;
+  background-color: transparent;
+  border: 0.5px rgba(0, 0, 0, 0.233) solid;
+  border-radius: 20px;
+  background-color: #ffd95a56;
+  transition: 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+.pribtn4{
+  min-width:20%;
+  min-height: 8vh;
+  font-size: 30px;
+  background-color: transparent;
+  border: 0.5px rgba(0, 0, 0, 0.233) solid;
+  border-radius: 20px;
+  background-color: #e4dccf71;
+  transition: 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
 
-}
-.pribtn {
-  min-height: 8vh;
-  width:24vw;
+.pribtn1:hover{
   background-color: transparent;
-  backdrop-filter: blur(5px);
-  border: none;
-  border-right: 0.5px rgba(0, 0, 0, 0.233) solid;
-  font-size: 20px;
-  font-weight: 500;
-  transition: 0.2s ease-in-out;
+  border: 1px solid black;
 }
-.pribtn:hover {
-  cursor: pointer;
-  background-color: #AEC2B6;
-}
-.pribtn:active{
-  background-color: #AEC2B6;
-}
-.lastbtn {
-  min-height: 8vh;
-  width: 22.4vw;
+.pribtn2:hover{
   background-color: transparent;
-  backdrop-filter: blur(5px);
-  border: none;
-  font-size: 20px;
-  font-weight: 500;
-  transition: 0.2s ease-in-out;
+  border: 1px solid black;
 }
-.lastbtn:hover {
-  cursor: pointer;
-  background-color: #AEC2B6;
+.pribtn3:hover{
+  background-color: transparent;
+  border: 1px solid black;
 }
-.lastbtn:active{
-  background-color: #AEC2B6;
+.pribtn4:hover{
+  background-color: transparent;
+  border: 1px solid black;
 }
