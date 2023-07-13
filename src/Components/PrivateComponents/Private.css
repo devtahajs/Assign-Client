@@ -1,8 +1,9 @@
-.privatecontainer {
-  height: 73vh;
+/* .privatecontainer {
+  height: 76vh;
   width: 90vw;
   padding: 5px;
   display: flex;
   justify-content: center;
-  /* border: 1px solid black; */
-}
+  border: 1px solid black;
+  align-items: center;
+} */

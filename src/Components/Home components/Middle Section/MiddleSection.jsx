@@ -55,8 +55,11 @@ const MiddleSection = () => {
                     <h3>{data.title}</h3>
                   </div>
                   <div className="down">
-                    <h4>{data.date}</h4>
-                    <h4>{data.category}</h4>
+                    <div className="down1">
+                    <h4 >{data.date}</h4>
+                    </div>
+                   
+                    <h4 className="down2">{data.category}</h4>
                   </div>
                 </div>
               ))}

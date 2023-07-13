@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@100;300;400;500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@100;300;400;500&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Poppins:wght@300&display=swap");
 
 * {
   margin: 0;
@@ -12,15 +14,22 @@ button 2 #FF8551  orange
 
 body {
   background-color: #f5f5f5;
-  font-family: "Ysabeau Office", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .App {
   overflow: hidden;
-  padding: 1rem;
-  height: 95vh;
-  background-image: url(/imgs/img2.jpg);
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  min-height: 99vh;
+  max-height: 99vh;
+  /* border: 1px solid  black; */
+  background-image: url(/imgs/img4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .SignIn {
@@ -28,36 +37,36 @@ body {
   font-size: 18px;
   border-radius: 5px;
   text-decoration: none;
-  background-color: #3f2305;
-  color: white;
-  box-shadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
-  border: none;
-  transition: 0.3s ease-in-out;
+  color: rgb(0, 0, 0);
+  border: 0.5px rgba(0, 0, 0, 0.233) solid;
+  background-color: transparent;
+  transition: 0.3s ease-in;
 }
+.SignIn:hover {
+  border: 0.5px rgba(0, 0, 0, 0.973) solid;
+  font-weight: 600;
+  background-color: #ffd95a7a;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
 .SignUp {
   padding: 13px;
   font-size: 18px;
   text-decoration: none;
   border-radius: 5px;
-  background-color: #ff8551;
-  color: white;
-  box-shadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
-  border: none;
-  transition: 0.3s ease-in-out;
+  background-color: #ffd95a7a;
+  color: rgb(0, 0, 0);
+  border: 0.5px rgba(0, 0, 0, 0.233) solid;
+  transition: 0.3s ease-in;
 }
-.SignIn:hover {
-  cursor: pointer;
-  color: var(--orange);
-  background: transparent;
-  border: 2px solid var(--orange);
-  transition: 0.3s ease-in-out;
-}
+
 .SignUp:hover {
+  border: 0.5px rgba(0, 0, 0, 0.973) solid;
+  background-color: transparent;
+  font-weight: 600;
   cursor: pointer;
-  color: var(--orange);
-  background: transparent;
-  border: 1px solid var(--orange);
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease-out;
 }
 
 ::-webkit-scrollbar {

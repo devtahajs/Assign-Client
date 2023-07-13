@@ -1,34 +1,44 @@
 .topcont {
   /* border: 1px solid black; */
-  width: 90vw;
+  min-width: 93vw;
   min-height: 8vh;
-  border-radius: 15px;
+  border-radius: 5px;
   overflow: hidden;
   border: 0.5px rgba(0, 0, 0, 0.233) solid;
 
 }
 .pribtn {
-  height: 8vh;
-  width: 22.5vw;
+  min-height: 8vh;
+  width:24vw;
   background-color: transparent;
   backdrop-filter: blur(5px);
   border: none;
   border-right: 0.5px rgba(0, 0, 0, 0.233) solid;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   transition: 0.2s ease-in-out;
 }
-button:hover {
-  background-color: rgba(240, 248, 255, 0.452);
+.pribtn:hover {
   cursor: pointer;
+  background-color: #AEC2B6;
+}
+.pribtn:active{
+  background-color: #AEC2B6;
 }
 .lastbtn {
-  height: 8vh;
-  width: 22.5vw;
+  min-height: 8vh;
+  width: 22.4vw;
   background-color: transparent;
   backdrop-filter: blur(5px);
   border: none;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   transition: 0.2s ease-in-out;
+}
+.lastbtn:hover {
+  cursor: pointer;
+  background-color: #AEC2B6;
+}
+.lastbtn:active{
+  background-color: #AEC2B6;
 }

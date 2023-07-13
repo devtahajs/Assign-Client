@@ -15,6 +15,15 @@ const axiosGet = async (token) => {
   return response.data;
 };
 
+//?Axios Service Delete  Data
+const deleteAssign = async (id) => {
+  const response = await axios.delete(
+    `https://assign-server.onrender.com/assign/deleteassign/${id}`
+  );
+  return response.data;
+};
+
+// !------------------------------------***---------------------------
 //Async Thunk Get Assignments
 export const getAssign = createAsyncThunk(
   "assignment/get",
@@ -22,6 +31,24 @@ export const getAssign = createAsyncThunk(
     try {
       const token = thunkAPI.getState().auth.user.token;
       return await axiosGet(token);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+//?Deleting Pending
+export const DeleteAssignData = createAsyncThunk(
+  "Assigndatadelete/delete",
+  async (id, thunkAPI) => {
+    try {
+      return await deleteAssign(id);
     } catch (error) {
       const message =
         (error.response &&
@@ -67,6 +94,9 @@ export const AssignmentSlice = createSlice({
         state.isError = true;
         state.message = action.payload;
         state.data = null;
+      })
+      .addCase(DeleteAssignData.fulfilled, (state, action) => {
+        state.message = action.payload;
       });
   },
 });

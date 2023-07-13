@@ -1,6 +1,7 @@
 .middlecont {
-  width: 90vw;
-  height: 55vh;
+  min-width: 93vw;
+  max-height: 56vh;
+  min-height: 56vh;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -19,23 +20,36 @@
   text-transform: capitalize;
 }
 .Card:hover {
-  background-color: rgba(240, 248, 255, 0.452);
+  background-color: aliceblue;
   cursor: pointer;
 }
 .up {
-  height: 4vh;
+  height: 4.5vh;
   width: 100;
-
-  /* border: 1px solid; */
-  text-align: center;
   background-color: rgba(218, 255, 218, 0.445);
+}
+.up h3{
+  text-align: center;
 }
 .down {
   display: flex;
-  justify-content: space-around;
-  margin-left: 10px;
-  height: 4vh;
-  margin-right: 10px;
-  align-items: center;
+  /* justify-content: space-around; */
+  /* margin-left: 10px; */
+  min-height: 4.5vh;
+  /* align-items: center; */
   /* border: 1px solid black; */
+}
+.down1{
+  background-color: rgba(128, 128, 128, 0.411);
+  color: rgba(0, 0, 0, 0.664);
+  min-width: 50%;
+  max-width: 50%;
+text-align: center;
+}
+.down2{
+  background-color: rgba(128, 128, 128, 0.411);
+  color: rgba(0, 0, 0, 0.664);
+  min-width: 50%;
+  max-width: 50%;
+text-align: center;
 }

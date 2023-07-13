@@ -2,14 +2,16 @@ import { useDispatch, useSelector } from "react-redux";
 import "./singleassignment.css";
 import { GoGoal } from "react-icons/go";
 import { MdDateRange, MdCategory } from "react-icons/md";
-import { pendingtask } from "../../Store/taskhandleSlice/taskSlice";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
   sendPending,
   resetpending,
 } from "../../Store/PendingSlice/PendingSlice";
 import { toast } from "react-toastify";
+import { sendCompleted } from "../../Store/CompletedSlice/CompletedSlice";
+import { DeleteAssignData } from "../../Store/Slices/Assignmentslice";
+import {CiCalendarDate} from "react-icons/ci"
 // ----------------------***-----------------------------------------
 
 const Singleassignment = () => {
@@ -35,7 +37,7 @@ const Singleassignment = () => {
       toast.error(message);
     }
     if (isSuccess) {
-      toast.success("Added To Pending");
+      toast.success("Task Added Pending");
     }
     dispatch(resetpending());
   }, [isError, isSuccess, message, navigate, dispatch]);
@@ -44,6 +46,16 @@ const Singleassignment = () => {
   const Pendinghandle = () => {
     const datasend = { data };
     dispatch(sendPending(datasend));
+    dispatch(DeleteAssignData(data._id));
+  };
+
+  //?Handle Complete
+  const handleCompleted = () => {
+    const datasend = { data };
+    dispatch(sendCompleted(datasend));
+    dispatch(DeleteAssignData(data._id));
+    toast.success("Congrats,For Clearing this Task");
+    navigate("/home");
   };
 
   return (
@@ -57,11 +69,9 @@ const Singleassignment = () => {
         </div>
         <div className="dateholder">
           <p>
-            <MdDateRange />
             {data ? data.date : null}
           </p>
           <p>
-            <MdCategory />
             {data ? data.category : null}
           </p>
         </div>
@@ -74,7 +84,9 @@ const Singleassignment = () => {
         <button className="btn1" onClick={Pendinghandle}>
           Pending
         </button>
-        <button className="btn2 ">Completed</button>
+        <button className="btn2 " onClick={handleCompleted}>
+          Completed
+        </button>
       </div>
     </div>
   );
@@ -82,7 +94,3 @@ const Singleassignment = () => {
 
 export default Singleassignment;
 
-//
-//       {single.category}
-//       {single.date}
-//

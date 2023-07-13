@@ -1,5 +1,7 @@
 .homecont {
   display: flex;
   flex-direction: column;
+  max-height: 79vh;
   gap: 5px;
+  /* border: 1px solid; */
 }

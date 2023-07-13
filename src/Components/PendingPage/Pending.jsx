@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CiTrash } from "react-icons/ci";
+import { MdDoneOutline } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -13,10 +13,12 @@ import "./pending.css";
 import { DeletePendingData } from "../../Store/PendingSlice/PendingSlice";
 import "./pending.css";
 import { toast } from "react-toastify";
+import { sendCompleted } from "../../Store/CompletedSlice/CompletedSlice";
 
 // ------------------***--------------------------
 
 const Pending = () => {
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -33,8 +35,10 @@ const Pending = () => {
     dispatch(resetpending());
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = (id, data) => {
+    const datap = { data };
     dispatch(DeletePendingData(id));
+    dispatch(sendCompleted(datap))
     toast.success("Nice,Pending Cleared");
     navigate("/home");
   };
@@ -53,7 +57,7 @@ const Pending = () => {
                   onClick={() => handleClick(data.data)}
                 >
                   <div className="up">
-                    <h3>{data.data.title}</h3>
+                    <h3 className="up1">{data.data.title}</h3>
                   </div>
                   <div className="downp">
                     <h4>{data.data.date}</h4>
@@ -62,10 +66,10 @@ const Pending = () => {
                 </div>
                 <div
                   className="rightdivs"
-                  onClick={() => handleDelete(data._id)}
+                  onClick={() => handleDelete(data._id, data.data)}
                 >
                   <h4 className="trash">
-                    <CiTrash />
+                    <MdDoneOutline />
                   </h4>
                 </div>
               </div>

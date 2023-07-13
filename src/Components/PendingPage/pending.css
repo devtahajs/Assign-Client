@@ -1,15 +1,17 @@
 .pendingcont {
-  width: 90vw;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+  width: 93vw;
+  height: 75vh;
   padding: 5px;
   overflow: scroll;
- 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  
 }
 .Cardp {
-  min-height: 9vh;
+  min-height: 10vh;
+  width: 92vw;
   display: flex;
   border-radius: 15px;
   backdrop-filter: blur(5px);
@@ -19,43 +21,46 @@
   text-transform: capitalize;
 }
 
+.leftdivs {
+  width: 83%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+}
+.leftdivs:hover{
+  background-color: aliceblue;
+}
 .up {
-  height: 4.5vh;
-  width: 94%;
-  /* border: 1px solid; */
-  text-align: left;
-  padding-left: 25px;
+  min-height: 5vh;
   background-color: rgba(218, 255, 218, 0.445);
 }
-.leftdivs{
-  width: 80%;
- 
+.up1{
+ text-align: left;
+ /* margin-left: -60px; */
 }
-.rightdivs{
-  width: 20%;
+.downp {
+  min-height: 5vh;
+  background-color: rgba(128, 128, 128, 0.411);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.downp h4{
+  margin-left: 15px;
+}
+
+
+.rightdivs {
+  background-color: rgba(14, 250, 73, 0.486);
+  width: 17%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(252, 93, 93, 0.486);
-  font-size: 33px; 
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.664);
   transition: 0.2s ease-in-out;
 }
-.rightdivs:hover{
-  background-color: red;
-  color: white;
-}
-.downp {
-  min-height: 4.5vh;
-  display: flex;
-  width: 94%;
-  
-  background-color: rgba(128, 128, 128, 0.411);
-  padding-left: 25px;
-  height: 4vh;
- gap: 30px;
 
-  margin-right: 10px;
-  align-items: center;
-  /* border: 1px solid black; */
+.rightdivs:hover {
+  background-color: rgb(0, 255, 55);
+  color: rgb(0, 0, 0);
 }
-
