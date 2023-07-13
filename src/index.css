@@ -24,7 +24,7 @@ body {
   min-height: 99vh;
   max-height: 99vh;
   /* border: 1px solid  black; */
-  background-image: url(/imgs/img4.jpg);
+  background-image: url(/imgs/img5.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -72,3 +72,4 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
