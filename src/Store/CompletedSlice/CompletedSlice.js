@@ -89,14 +89,14 @@ export const CompletedSlice = createSlice({
       .addCase(getCompletedData.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.pendingData = action.payload;
+        state.CompletedData = action.payload;
       })
       .addCase(getCompletedData.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
         state.message = action.payload;
-        state.pendingData = null;
+        state.CompletedData = null;
       });
   },
 });

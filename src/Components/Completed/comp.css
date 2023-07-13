@@ -1,13 +1,13 @@
-.middlecont {
+.compcont {
   min-width: 93vw;
-  max-height: 56vh;
-  min-height: 56vh;
+  max-height: 70vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   gap: 7px;
   padding: 5px;
   overflow: scroll;
-  /* border: 1px solid; */
+ 
 }
 .Card {
   min-height: 9vh;
@@ -29,7 +29,7 @@
   width: 100;
   background-color: rgba(218, 255, 218, 0.445);
 }
-.up h3{
+.up h3 {
   text-align: center;
 }
 .down {
@@ -40,17 +40,24 @@
   /* align-items: center; */
   /* border: 1px solid black; */
 }
-.down1{
+.down1 {
   background-color: rgba(128, 128, 128, 0.411);
   color: rgba(0, 0, 0, 0.664);
   min-width: 50%;
   max-width: 50%;
-text-align: center;
+  text-align: center;
 }
-.down2{
+.down2 {
   background-color: rgba(128, 128, 128, 0.411);
   color: rgba(0, 0, 0, 0.664);
   min-width: 50%;
   max-width: 50%;
-text-align: center;
+  text-align: center;
+}
+
+.headcomp {
+  font-size: 18px;
+  font-family: "Hachi Maru Pop", cursive;
+  text-align: center;
+  padding: 10px;
 }

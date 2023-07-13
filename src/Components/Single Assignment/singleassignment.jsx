@@ -11,7 +11,7 @@ import {
 import { toast } from "react-toastify";
 import { sendCompleted } from "../../Store/CompletedSlice/CompletedSlice";
 import { DeleteAssignData } from "../../Store/Slices/Assignmentslice";
-import {CiCalendarDate} from "react-icons/ci"
+
 // ----------------------***-----------------------------------------
 
 const Singleassignment = () => {
@@ -93,4 +93,3 @@ const Singleassignment = () => {
 };
 
 export default Singleassignment;
-

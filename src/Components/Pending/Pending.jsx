@@ -31,7 +31,7 @@ const Pending = () => {
   const handleClick = (data) => {
     dispatch(addsingle(data));
     localStorage.setItem("single", JSON.stringify(data));
-    navigate("/single");
+    navigate("/pendcomp");
     dispatch(resetpending());
   };
 
