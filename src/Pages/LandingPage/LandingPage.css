@@ -37,11 +37,13 @@
     color: rgb(0, 0, 0);
     padding: 5px;
     border-radius: 10px;
-    border: 0.5px solid white;
+    border: 0.5px solid rgb(0, 0, 0);
     transition: 0.3s ease-in-out;
+   padding-left: 15px;
+   padding-right: 15px;
 }
 .explore:hover{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.486);
     border: 1px solid black;
     color: black;
 }
@@ -58,12 +60,12 @@
     overflow: hidden;
     transition: 0.2s ease-in-out;
     text-transform: capitalize;
-    transition: transform 0.3s ease-in-out;
+    transition:  0.3s ease-in-out;
+    border: 1px solid transparent;
 }
 .cardsland:hover{
-    transform: scale(1.1); 
+    border: 1px solid black;
 }
-
 .cardsland h3{
     font-size: 15px;
     text-align: center;
