@@ -65,8 +65,8 @@ const Login = () => {
               />
 
               <button className="SignIn">LogIn</button>
-              <div className="link">
-                <Link to="/">Don't Have A Account</Link>
+              <div className="linkcen">
+                <Link to="/register" className="link">Don't Have A Account</Link>
               </div>
             </form>
           </div>

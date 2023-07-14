@@ -24,9 +24,10 @@ import LandingPage from "./Pages/LandingPage/LandingPage.jsx";
 //Route SetUp
 const router = createBrowserRouter(
   createRoutesFromElements(
+
     <Route path="/" element={<App />}>
-      <Route index={true} path="/taskgiver" element={<LandingPage />} />
-      <Route path="/" element={<Register />} />
+      <Route index={true} path="/" element={<LandingPage />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       {/* Private Routes */}
       <Route element={<PrivateRoute />}>

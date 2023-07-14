@@ -1,0 +1,77 @@
+.landcont {
+    min-width: 93vw;
+    max-height: 76vh;
+    min-height: 76vh;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 5px;
+    overflow: scroll;
+    /* border: 1px solid; */
+}
+.topland {
+    min-height: 50vh;
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+   background-color: #fccf553d;
+    overflow: hidden;
+    padding: 15px;
+    transition: 0.2s ease-in-out;
+    text-transform: capitalize;
+   
+}
+.topland h3{
+    height: 44vh;
+    color: rgb(2, 2, 2);
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 200;
+    /* border: 1px solid white; */
+    font-size: 23px;
+    letter-spacing: 3px;
+}
+.explore{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 10px;
+    border: 0.5px solid white;
+    transition: 0.3s ease-in-out;
+}
+.explore:hover{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.cardsland{
+    min-height: 18vh;
+    max-height: 18vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    text-transform: capitalize;
+    transition: transform 0.3s ease-in-out;
+}
+.cardsland:hover{
+    transform: scale(1.1); 
+}
+
+.cardsland h3{
+    font-size: 15px;
+    text-align: center;
+    font-family: "Hachi Maru Pop", cursive;
+}
+.cardsland p{
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.2;
+    margin-top: 9px;
+}

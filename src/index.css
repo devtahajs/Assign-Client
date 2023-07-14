@@ -24,8 +24,9 @@ body {
   min-height: 99vh;
   max-height: 99vh;
   /* border: 1px solid  black; */
-  background-image: url(/imgs/img5.jpg);
+  background-image: url(/imgs/img2.jpg);
   background-repeat: no-repeat;
+  
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -38,7 +39,7 @@ body {
   border-radius: 5px;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  border: 0.5px rgba(0, 0, 0, 0.233) solid;
+  border: 0.5px solid  #331D2C;
   background-color: transparent;
   transition: 0.3s ease-in;
 }
@@ -57,7 +58,7 @@ body {
   border-radius: 5px;
   background-color: #ffd95a7a;
   color: rgb(0, 0, 0);
-  border: 0.5px rgba(0, 0, 0, 0.233) solid;
+  border: 0.5px solid  #331D2C;
   transition: 0.3s ease-in;
 }
 

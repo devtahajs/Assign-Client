@@ -50,6 +50,9 @@
   font-size: 18px;
   text-align: justify;
   padding: 9px;
+  background-color: rgba(218, 255, 218, 0.247);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 
 .downx {
