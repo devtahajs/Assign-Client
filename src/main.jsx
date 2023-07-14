@@ -19,19 +19,21 @@ import store from "./Store/Store.js";
 import Pending from "./Components/Pending/Pending.jsx";
 import PendCompPage from "./Components/Pend&CompPage/PendcompPage.jsx";
 import Completed from "./Components/Completed/Completed.jsx";
+import LandingPage from "./Pages/LandingPage/LandingPage.jsx";
 //------------***---------------***----------
 //Route SetUp
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index={true} path="/" element={<Register />} />
+      <Route index={true} path="/taskgiver" element={<LandingPage />} />
+      <Route path="/" element={<Register />} />
       <Route path="/login" element={<Login />} />
       {/* Private Routes */}
       <Route element={<PrivateRoute />}>
         <Route path="/home" element={<Home />} />
         <Route path="/single" element={<Singleassignment />} />
         <Route path="/pendings" element={<Pending />} />
-        <Route path="/completed" element={<Completed/>} />
+        <Route path="/completed" element={<Completed />} />
         <Route path="/pendcomp" element={<PendCompPage />} />
       </Route>
     </Route>
